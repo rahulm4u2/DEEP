@@ -57,6 +57,7 @@ class SegmentationAgent:
         """
         if shuffle:
             shuffle_idx = np.random.permutation(range(len(self.images_list)))
+            shuffle_idx = shuffle_idx.astype(int) 
             self.images_list = self.images_list[shuffle_idx]
             self.masks_list = self.masks_list[shuffle_idx]
 
